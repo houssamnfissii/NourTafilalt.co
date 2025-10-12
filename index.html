@@ -2215,10 +2215,11 @@
                 heroWhatsapp.addEventListener('click', (e) => { e.preventDefault(); forceOpenWhatsApp(storeInfo.whatsapp_number, 'السلام عليكم، أريد الاستفسار عن منتجاتكم'); });
             }
 
-            footerSocialContainer.innerHTML = `
-                <a href="${storeInfo.facebook_url || '#'}" target="_blank" class="text-white hover:text-secondary text-xl md:text-2xl transition-all duration-300 hover:scale-110 mr-4" aria-label="فيسبوك"><i class="fab fa-facebook"></i></a>
-                <a href="${storeInfo.instagram_url || '#'}" target="_blank" class="text-white hover:text-secondary text-xl md:text-2xl transition-all duration-300 hover:scale-110 mr-4" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
-                <a href="#" id="footer-whatsapp" class="text-white hover:text-secondary text-xl md:text-2xl transition-all duration-300 hover:scale-110" aria-label="واتساب"><i class="fab fa-whatsapp"></i></a>
+         footerSocialContainer.innerHTML = `
+                <a href="${storeInfo.facebook_url || '#'}" target="_blank" class="text-white hover:text-secondary text-xl md:text-2xl transition-all duration-300 hover:scale-110 mr-4"><i class="fab fa-facebook"></i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="${storeInfo.instagram_url || '#'}" target="_blank" class="text-white hover:text-secondary text-xl md:text-2xl transition-all duration-300 hover:scale-110 mr-4"><i class="fab fa-instagram"></i></a> 
+                <a href="#" id="footer-whatsapp" class="text-white hover:text-secondary text-xl md:text-2xl transition-all duration-300 hover:scale-110"><i class="fab fa-whatsapp"></i></a>
             `;
             if (storeInfo.whatsapp_number) {
                 document.getElementById('footer-whatsapp').addEventListener('click', (e) => { e.preventDefault(); forceOpenWhatsApp(storeInfo.whatsapp_number, 'السلام عليكم، أريد الاستفسار عن منتجاتكم'); });
